@@ -33,4 +33,5 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 ## Execution
 - He creado toda la estructura con Main, model, Service, ConsoleReader y ConsoleUI
 - He empezado a crear un menu y metodos tipo readInt() para pillar exceptions.
+- He cambiato el ArrayList por un HashMap para poder dar posiciones a los libros
 - 
