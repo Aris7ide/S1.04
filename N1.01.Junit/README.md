@@ -37,4 +37,4 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 - #### He creado todo el menu en ConsoleUI con toda la logica en ConsoleUI para cada metodo del menu.
 - He añadido la Dependency en el pom-xml usando Junit 5.10.2.
 - He creado la clase BookServiceTest y el primer @Test para hacer que la primera instancia de BookService tenga un Map.
-- 
+- He creado el test CollectionSizeCorrect() usando el assertEquals(numero, .size())

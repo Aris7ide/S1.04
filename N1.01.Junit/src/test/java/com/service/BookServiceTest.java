@@ -14,26 +14,10 @@ class BookServiceTest {
     }
 
     @Test
-    void addBook() {
-    }
-
-    @Test
-    void showBooks() {
-    }
-
-    @Test
-    void showBookByPosition() {
-    }
-
-    @Test
-    void addBookByPosition() {
-    }
-
-    @Test
-    void cancelBook() {
-    }
-
-    @Test
-    void showBooksAZ() {
+    void CollectionSizeCorrect() {
+        BookService bookService = new BookService();
+        BookService.getListBooks().put(1,new Book("Zelda"));
+        BookService.getListBooks().put(2,new Book("Tarzan"));
+        assertEquals(2,BookService.getListBooks().size());
     }
 }
