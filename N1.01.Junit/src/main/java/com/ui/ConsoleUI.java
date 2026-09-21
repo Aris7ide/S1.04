@@ -1,11 +1,10 @@
 package com.ui;
 
-import com.service.Service;
+import com.service.BookService;
 
 public class ConsoleUI {
 
     public ConsoleUI(Object obj) {
-
     }
 
     public static void start() {
@@ -23,19 +22,23 @@ public class ConsoleUI {
                     "0. Sal");
             switch (option) {
                 case 1:
-                    Service.addBook();
+                    BookService.addBook();
                     break;
                 case 2:
-                    Service.showBooks();
+                    BookService.showBooks();
                     break;
                 case 3:
-                    Service.showBookByPosition();
+                    BookService.showBookByPosition();
                     break;
                 case 4:
-                    Service.addBookByPosition();
+                    BookService.addBookByPosition();
                     break;
                 case 5:
+                    BookService.cancelBook();
+                    break;
                 case 6:
+                    BookService.showBooksAZ();
+                    break;
                 case 0:
                     System.out.println("Adiòs");
                     break;

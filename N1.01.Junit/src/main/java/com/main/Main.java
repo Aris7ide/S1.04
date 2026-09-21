@@ -1,12 +1,12 @@
 package com.main;
 
-import com.service.Service;
+import com.service.BookService;
 import com.ui.ConsoleUI;
 
 public class Main {
     public static void main(String[] args) {
 
-        Service service = new Service();
+        BookService service = new BookService();
         ConsoleUI ui = new ConsoleUI(service);
 
         ConsoleUI.start();
