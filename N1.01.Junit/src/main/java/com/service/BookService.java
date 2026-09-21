@@ -8,16 +8,16 @@ import java.util.*;
 
 public class BookService {
 
-    static Map<Integer,Book> listBooks = new HashMap<>();
+    private Map<Integer,Book> listBooks = new HashMap<>();
 
-    public static void addBook() {
+    public void addBook() {
         String name = ConsoleReader.readString("Cual es el nombre del libro?");
         int position = listBooks.size()+1;
         listBooks.put(position,new Book(name));
         System.out.println("El libro " + name + " ha sido añadido!");
     }
 
-    public static void showBooks() {
+    public void showBooks() {
         try {
             if (listBooks.isEmpty()) {
                 throw new NoBookInList("No hay libros registrados");
@@ -33,7 +33,7 @@ public class BookService {
         }
     }
 
-    public static void showBookByPosition() {
+    public void showBookByPosition() {
         try {
             if (listBooks.isEmpty()) {
                 throw new NoBookInList("No hay libros registrados");
@@ -50,7 +50,7 @@ public class BookService {
         }
     }
 
-    public static void addBookByPosition() {
+    public void addBookByPosition() {
         int position = ConsoleReader.readInt("Que posicion");
         String name = ConsoleReader.readString("Cual es el nombre?");
 
@@ -58,7 +58,7 @@ public class BookService {
         System.out.println("El libro " + name + " ha sido añadido a la posiciòn " + position);
     }
 
-    public static void cancelBook() {
+    public void cancelBook() {
         try {
             if (listBooks.isEmpty()) {
                 throw new NoBookInList("No hay libros registrados");
@@ -73,7 +73,7 @@ public class BookService {
         }
     }
 
-    public static void showBooksAZ() {
+    public void showBooksAZ() {
         try {
             if (listBooks.isEmpty()) {
                 throw new NoBookInList("No hay libros registrados");
@@ -89,12 +89,8 @@ public class BookService {
         }
     }
 
-    public static Map<Integer, Book> getListBooks() {
+    public Map<Integer, Book> getListBooks() {
         return listBooks;
-    }
-
-    public static void setListBooks(Map<Integer, Book> listBooks) {
-        BookService.listBooks = listBooks;
     }
 }
 

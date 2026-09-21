@@ -9,7 +9,7 @@ public class Main {
         BookService service = new BookService();
         ConsoleUI ui = new ConsoleUI(service);
 
-        ConsoleUI.start();
+        ui.start();
 
     }
 }

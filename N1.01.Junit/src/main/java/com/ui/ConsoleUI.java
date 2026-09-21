@@ -4,10 +4,13 @@ import com.service.BookService;
 
 public class ConsoleUI {
 
-    public ConsoleUI(Object obj) {
+    private final BookService bookService;
+
+    public ConsoleUI(BookService bookService)  {
+        this.bookService = bookService;
     }
 
-    public static void start() {
+    public void start() {
 
         int option = 1;
         while (option != 0) {
@@ -22,22 +25,22 @@ public class ConsoleUI {
                     "0. Sal");
             switch (option) {
                 case 1:
-                    BookService.addBook();
+                    bookService.addBook();
                     break;
                 case 2:
-                    BookService.showBooks();
+                    bookService.showBooks();
                     break;
                 case 3:
-                    BookService.showBookByPosition();
+                    bookService.showBookByPosition();
                     break;
                 case 4:
-                    BookService.addBookByPosition();
+                    bookService.addBookByPosition();
                     break;
                 case 5:
-                    BookService.cancelBook();
+                    bookService.cancelBook();
                     break;
                 case 6:
-                    BookService.showBooksAZ();
+                    bookService.showBooksAZ();
                     break;
                 case 0:
                     System.out.println("Adiòs");

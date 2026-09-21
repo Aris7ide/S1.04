@@ -39,3 +39,7 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 - He creado la clase BookServiceTest y el primer @Test para hacer que la primera instancia de BookService tenga un Map.
 - He creado el test CollectionSizeCorrect() usando el assertEquals(numero, .size())
 - He creado el test PositionBookIsCorrect() 
+- #### He modificado todos los metodos a non-static para poder llamar desde el test bookService en vez de BookService.
+- #### He tenido que modificar todo el programa para poder hacer que funcionen los tests
+- he creado el test ShowBookByPosition() que compruebe que el libro enseñado sea efectivamente el libro de esa posicion
+- 
