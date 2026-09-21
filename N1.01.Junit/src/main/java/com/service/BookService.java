@@ -88,5 +88,13 @@ public class BookService {
             System.err.println(e.getMessage());
         }
     }
+
+    public static Map<Integer, Book> getListBooks() {
+        return listBooks;
+    }
+
+    public static void setListBooks(Map<Integer, Book> listBooks) {
+        BookService.listBooks = listBooks;
+    }
 }
 
