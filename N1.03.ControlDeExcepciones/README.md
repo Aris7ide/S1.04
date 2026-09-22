@@ -15,4 +15,4 @@ A continuación, implementa una clase de test con JUnit 5 que verifique que el m
 ## Execution
 - he creado una clase methodClass con un método checkExceptions() que llama a un elemento en un List que no existe.
 - he creado la página de testing y llamando el método sale la excepción IndexOutOfBoundaries
-- 
+- le he puesto en el test assertThrows(IndexOutOfBoundException.class, () -> {AQUI LLAMO AL METODO QUE TIENE QUE LANZAR EL ERROR();});
