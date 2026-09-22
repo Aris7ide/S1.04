@@ -23,3 +23,7 @@ También se deben validar valores inválidos , como números negativos o demasia
 - CalculoDni con le metodo que hay que comprobar
 - El Main para llamar el metodo
 - ### He hecho algun lio con IntelliJ y he creado una segunda copia del proyecto porque IntelliJ no reconocia la estructura y las carpetas. He llamado el viejo proyecto N1.02.TestParametrizadoWrong
+- #### He limpiado gihub de carpetas inutiles y añadido las misma al -gitignore para que no las suba otra vez.
+- He vuelto al ejercicio y me he dado cuenta que teniendo un scanner en CalculoDni() los test paraban pidiendome de inserir un dni sin leerlo del @CsvSource
+- He quitado todos los scanners de la clase y las pruebas han funcionado con dos dni en el @CsvSource
+- He puesto 10 pruebas diferentes en el testCalculateLetter().
