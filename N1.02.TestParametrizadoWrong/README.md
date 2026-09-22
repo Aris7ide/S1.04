@@ -22,4 +22,3 @@ También se deben validar valores inválidos , como números negativos o demasia
 - ConsoleReader con un readString para pillar excepciones
 - CalculoDni con le metodo que hay que comprobar
 - El Main para llamar el metodo
-- ### He hecho algun lio con IntelliJ y he creado una segunda copia del proyecto porque IntelliJ no reconocia la estructura y las carpetas. He llamado el viejo proyecto N1.02.TestParametrizadoWrong
