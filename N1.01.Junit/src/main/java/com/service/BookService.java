@@ -78,8 +78,7 @@ public class BookService {
             if (listBooks.isEmpty()) {
                 throw new NoBookInList("No hay libros registrados");
             } else {
-                List<Book> booksAZ = new ArrayList<>(listBooks.values());
-                booksAZ.sort(Comparator.comparing(Book::getName));
+                List<Book> booksAZ = booksAZ();
                 for (Book b : booksAZ) {
                     System.out.println(b.toString());
                 }
@@ -87,6 +86,12 @@ public class BookService {
         } catch (NoBookInList e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    public List<Book> booksAZ() {
+        List<Book> booksAZ = new ArrayList<>(listBooks.values());
+        booksAZ.sort(Comparator.comparing(Book::getName));
+        return booksAZ;
     }
 
     public Map<Integer, Book> getListBooks() {

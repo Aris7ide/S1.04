@@ -42,4 +42,9 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 - #### He modificado todos los metodos a non-static para poder llamar desde el test bookService en vez de BookService.
 - #### He tenido que modificar todo el programa para poder hacer que funcionen los tests
 - he creado el test ShowBookByPosition() que compruebe que el libro enseñado sea efectivamente el libro de esa posicion
-- 
+- he creado el test CheckCorrectModification() para estar seguro que el .size() de listBooks cambia, que el libro se ponga en la posicion correcta y que la posicion exista.
+- He creado el test CheckRemoving() para comprobar que cuando se elimina algo el .size() baja de un numero.
+- He puesto un "BeforeEach" simplificando toda la clase test.
+- Para crear el test CheckOrderAZ() para controlar que el orden sea alfabetico he tenido que separar la clase showBooksAZ() de booksAZ() que se encarga solo de crear una Lista ordenada.
+- He llamado el metodo booksAZ() en el test CheckOrder() para verificar que funciona.
+- Tambièn he usado el @ShowName() para que le test tenga un titulo.
