@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="N1.02.TestParametrizado" />
         <module name="N1.01.Junit" />
+        <module name="N1.03.ControlDeExcepciones" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
