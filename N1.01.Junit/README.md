@@ -48,3 +48,4 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 - Para crear el test CheckOrderAZ() para controlar que el orden sea alfabetico he tenido que separar la clase showBooksAZ() de booksAZ() que se encarga solo de crear una Lista ordenada.
 - He llamado el metodo booksAZ() en el test CheckOrder() para verificar que funciona.
 - Tambièn he usado el @ShowName() para que le test tenga un titulo.
+- He añadido el test de que no se permiten duplicados y puesto nombres a todos los tests.

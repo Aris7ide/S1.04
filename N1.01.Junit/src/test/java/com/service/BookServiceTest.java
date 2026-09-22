@@ -26,22 +26,26 @@ class BookServiceTest {
     }
 
     @Test
+    @DisplayName("La colleciòn no està vacia")
     void CollectionNotNull() {
         assertNotNull(bookService.getListBooks(), "La clase no puede estar vacia");
     }
 
     @Test
+    @DisplayName("El .size() de la collecìòn es correcto")
     void CollectionSizeCorrect() {
         assertEquals(2,bookService.getListBooks().size());
     }
 
     @Test
+    @DisplayName("La posiciòn de los elementos es correcta")
     void PositionBookIsCorrect() {
         assertEquals("Zelda", bookService.getListBooks().get(1).getName());
         assertEquals("Tarzan", bookService.getListBooks().get(2).getName());
     }
 
     @Test
+    @DisplayName("Los libros se enseñan correctamente con la posiciòn")
     void ShowBookByPosition() {
         bookService.getListBooks().put(10,new Book("Sandokan"));
         Book bookFound = bookService.getListBooks().get(10);
@@ -49,6 +53,7 @@ class BookServiceTest {
     }
 
     @Test
+    @DisplayName("Los libros se añaden correctamente")
     void CheckCorrectModification() {
         Book book = new Book("Sandokan");
         int position = 23;
@@ -60,6 +65,7 @@ class BookServiceTest {
     }
 
     @Test
+    @DisplayName("Los libros se eliminan correctamente")
     void CheckRemoving() {
         int initialListSize = bookService.getListBooks().size();
 
@@ -80,5 +86,11 @@ class BookServiceTest {
         assertEquals("Zelda", bookListAZ.get(3).getName());
     }
 
+    @Test
+    @DisplayName("No se permiten duplicados")
+    void noDoubles() {
+        bookService.getListBooks().put(1,new Book("Zelda"));
+        assertEquals(2, bookService.getListBooks().size());
+    }
 
 }
