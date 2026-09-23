@@ -6,6 +6,10 @@ public class Calculator {
         this.total = 0;
     }
 
+    public void operationAdd(int value) {
+        total = this.total + value;
+    }
+
     public int getTotal() {
         return total;
     }
