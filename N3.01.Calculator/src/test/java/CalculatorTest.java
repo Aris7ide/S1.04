@@ -51,4 +51,11 @@ class CalculatorTest {
         assertThatThrownBy(() -> calculator.operationDivide(0)).isInstanceOf(ArithmeticException.class).hasMessage("No se puede dividir por 0");
     }
 
+    @Test
+    void checkResetToZero() {
+        calculator.operationAdd(30);
+        calculator.operationReset();
+        assertThat(calculator.getTotal()).isEqualTo(0);
+    }
+
 }

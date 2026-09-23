@@ -25,6 +25,10 @@ public class Calculator {
         total = this.total / value;
     }
 
+    public void operationReset() {
+        total = 0;
+    }
+
     public int getTotal() {
         return total;
     }
