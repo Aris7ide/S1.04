@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="N2.01.AssertJ" />
         <module name="N1.02.TestParametrizado" />
         <module name="N1.01.Junit" />
         <module name="N1.03.ControlDeExcepciones" />
