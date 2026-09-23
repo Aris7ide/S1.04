@@ -7,10 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.awt.print.Book;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
@@ -80,6 +77,14 @@ class methodsClassTest {
     @DisplayName("Check IndexOutOfBound exception")
     void checkException() {
         assertThatThrownBy(()-> excepcionClass.exception()).isInstanceOf(IndexOutOfBoundsException.class);
+    }
+
+    @Test
+    @DisplayName("Check empty object")
+    void checkEmpty() {
+        List<Objects> list = new ArrayList<>();
+
+        assertThat(list).isEmpty();
     }
 
 }

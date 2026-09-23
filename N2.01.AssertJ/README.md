@@ -37,3 +37,6 @@ Crea un mapa y verifica que contiene una de las key que le añade.
 Provoca una ArrayIndexOutOfBoundsExceptionen una clase cualquiera. Crea una aserción que valide que la excepción es arrojada cuando corresponde.
 - #### He creado el test checkException() and the class exceptionClass with a method calling a position that doesn't exist
 - #### Asserted through assertThatThrownBy().isInstanceOf(IndexOutOfBoundException.class)
+## Ejercicio 7
+Crea un objeto Optionalvacío. Escribe la aserción correcta para verificar que efectivamente está vacío.
+- #### I have just created a test with an empty List and checked with assertThat().isEmpty
