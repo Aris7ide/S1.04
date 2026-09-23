@@ -31,4 +31,18 @@ class CalculatorTest {
         assertThat(calculator.getTotal()).isEqualTo(20);
     }
 
+    @Test
+    void checkMultiply() {
+        calculator.operationAdd(30);
+        calculator.operationMultiply(2);
+        assertThat(calculator.getTotal()).isEqualTo(60);
+    }
+
+    @Test
+    void checkDivide() {
+        calculator.operationAdd(30);
+        calculator.operationDivide(3);
+        assertThat(calculator.getTotal()).isEqualTo(10);
+    }
+
 }

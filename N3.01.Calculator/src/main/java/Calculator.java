@@ -14,6 +14,14 @@ public class Calculator {
         total = this.total - value;
     }
 
+    public void operationMultiply(int value) {
+        total = this.total * value;
+    }
+
+    public void operationDivide(int value) {
+        total = this.total / value;
+    }
+
     public int getTotal() {
         return total;
     }
