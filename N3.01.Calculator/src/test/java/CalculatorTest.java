@@ -24,4 +24,11 @@ class CalculatorTest {
         assertThat(calculator.getTotal()).isEqualTo(10);
     }
 
+    @Test
+    void checkSubtract() {
+        calculator.operationAdd(30);
+        calculator.operationSubtract(10);
+        assertThat(calculator.getTotal()).isEqualTo(20);
+    }
+
 }

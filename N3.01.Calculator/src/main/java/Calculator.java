@@ -10,6 +10,10 @@ public class Calculator {
         total = this.total + value;
     }
 
+    public void operationSubtract(int value) {
+        total = this.total - value;
+    }
+
     public int getTotal() {
         return total;
     }

@@ -24,3 +24,4 @@ Implementaremos una clase llamada Calculatorque gestiona un total acumulado , in
 - he creado la clase Calculator y la clase test y empezado con el checkear que al llamar calculadora empeza en 0
 - para que el primer test pase le he dado a Calculator un atributo int Total y lo he inicializado con 0
 - he hecho el test checkAdd() llamando un metodo operationAdd() y luego en Calculator he añadido el metodo
+- lo mismo con el test checkSubtract(), 
