@@ -27,3 +27,4 @@ Implementaremos una clase llamada Calculatorque gestiona un total acumulado , in
 - lo mismo con el test checkSubtract(), checkMultiply() y checkDivide()
 - usando assertThatThrownBy() el test me confirma que lanza una ArithmeticException
 - add test checkReset() and method operationReset() and checked.
+- he creado otro test checkTotal() aunque el getTotal ha sido verificado hasta ahora en todos los test.

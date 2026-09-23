@@ -58,4 +58,11 @@ class CalculatorTest {
         assertThat(calculator.getTotal()).isEqualTo(0);
     }
 
+    @Test
+    void checkTotal() {
+        calculator.operationAdd(30);
+        calculator.operationSubtract(20);
+        assertThat(calculator.getTotal()).isEqualTo(10);
+    }
+
 }
