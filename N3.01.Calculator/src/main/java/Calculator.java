@@ -19,6 +19,9 @@ public class Calculator {
     }
 
     public void operationDivide(int value) {
+        if (value == 0) {
+            throw new ArithmeticException("No se puede dividir por 0");
+        }
         total = this.total / value;
     }
 

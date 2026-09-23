@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -43,6 +44,11 @@ class CalculatorTest {
         calculator.operationAdd(30);
         calculator.operationDivide(3);
         assertThat(calculator.getTotal()).isEqualTo(10);
+    }
+
+    @Test
+    void checkDivideException() {
+        assertThatThrownBy(() -> calculator.operationDivide(0)).isInstanceOf(ArithmeticException.class).hasMessage("No se puede dividir por 0");
     }
 
 }
