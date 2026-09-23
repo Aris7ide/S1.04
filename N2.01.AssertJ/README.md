@@ -34,4 +34,6 @@ Crea un arrayList contenedor de varios tipos de objetos (créalos también).
 Crea un mapa y verifica que contiene una de las key que le añade.
 - #### He creado el test checkMap() y con .containsKey() he probado que haya una Key creada
 ## Ejercicio 6
-
+Provoca una ArrayIndexOutOfBoundsExceptionen una clase cualquiera. Crea una aserción que valide que la excepción es arrojada cuando corresponde.
+- #### He creado el test checkException() and the class exceptionClass with a method calling a position that doesn't exist
+- #### Asserted through assertThatThrownBy().isInstanceOf(IndexOutOfBoundException.class)

@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -73,6 +74,12 @@ class methodsClassTest {
         houses.put(2,"Casa 2");
 
         assertThat(houses).containsKey(1);
+    }
+
+    @Test
+    @DisplayName("Check IndexOutOfBound exception")
+    void checkException() {
+        assertThatThrownBy(()-> excepcionClass.exception()).isInstanceOf(IndexOutOfBoundsException.class);
     }
 
 }
