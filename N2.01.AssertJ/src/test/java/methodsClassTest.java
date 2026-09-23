@@ -8,7 +8,9 @@ import org.junit.jupiter.api.Test;
 
 import java.awt.print.Book;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -60,6 +62,17 @@ class methodsClassTest {
         assertThat(instrumentList).containsOnlyOnce(guitar);
 
         assertThat(instrumentList).doesNotContain(bajo);
+    }
+
+    @Test
+    @DisplayName("Check that Map has one of the elements")
+    void checkMap() {
+        Map<Integer, String> houses = new HashMap<>();
+
+        houses.put(1,"Casa 1");
+        houses.put(2,"Casa 2");
+
+        assertThat(houses).containsKey(1);
     }
 
 }

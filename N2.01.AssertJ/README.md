@@ -30,4 +30,8 @@ Crea un arrayList contenedor de varios tipos de objetos (créalos también).
 - Verifica que en la lista anterior uno de los objetos se ha añadido sólo una vez. Deja uno de los elementos sin añadir, y verifica que la lista no contiene éste último.
 - #### He creado el test checkArrayElements y hecho las 4 pruebas con .containsExactly, .containsExactlyInAnyOrder, .containsOnlyOnce y .doesNotContain
 - #### Para hacer esta prueba he tenido que crear las 4 clases Bajo,Guitar,Piano,Ukulele y la superclase Instrument
+## Ejercicio 5
+Crea un mapa y verifica que contiene una de las key que le añade.
+- #### He creado el test checkMap() y con .containsKey() he probado que haya una Key creada
+## Ejercicio 6
 
