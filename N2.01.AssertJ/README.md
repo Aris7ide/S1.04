@@ -16,6 +16,18 @@ Cada exercici proposat se centra en una funcionalitat diferent d’AssertJ. Et r
 ## Ejercicio 1
 Una aserción que demuestre que el valor de dos objetos enteros es igual, y otra que indique que no lo es.
 - Creo la clase para meter los metodos y el test de la misma
-- He creado el primer test checkEquals() y me he dado cuenta de que no necesito la clase methodsClass para hacer tests ya que puedo crear los objetos necesarios directamente en los tests
-- Creado el test checkReference y checkArrays
-- 
+## Ejercicio 2 y 3
+Una aserción que demuestre que la referencia a un objeto es la misma que otra, y otra que indique que es distinta.
+
+Una aserción que indique que dos arrays de enteros son idénticos.
+
+- #### He creado el primer test checkEquals() y me he dado cuenta de que no necesito la clase methodsClass para hacer tests ya que puedo crear los objetos necesarios directamente en los tests
+- #### Creado el test checkReference y checkArrays
+## Ejercicio 4
+Crea un arrayList contenedor de varios tipos de objetos (créalos también). 
+- Escribe una aserción para verificar el orden de los objetos en ArrayList según han sido insertados.
+- Verifica ahora que la lista anterior contiene los objetos en cualquier orden.
+- Verifica que en la lista anterior uno de los objetos se ha añadido sólo una vez. Deja uno de los elementos sin añadir, y verifica que la lista no contiene éste último.
+- #### He creado el test checkArrayElements y hecho las 4 pruebas con .containsExactly, .containsExactlyInAnyOrder, .containsOnlyOnce y .doesNotContain
+- #### Para hacer esta prueba he tenido que crear las 4 clases Bajo,Guitar,Piano,Ukulele y la superclase Instrument
+
