@@ -10,6 +10,7 @@
         <module name="N1.02.TestParametrizado" />
         <module name="N1.01.Junit" />
         <module name="N1.03.ControlDeExcepciones" />
+        <module name="N3.01.Calculator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
