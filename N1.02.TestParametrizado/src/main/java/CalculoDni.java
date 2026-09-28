@@ -2,7 +2,8 @@ public class CalculoDni {
 
     private static final String LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE";
 
-    public char calculateDniLetter(int dni) {
+    public static char calculateDniLetter(int dni) {
+
         char finalChar;
 
         int numberChar = dni % 23;

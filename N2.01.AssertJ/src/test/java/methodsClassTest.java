@@ -16,14 +16,14 @@ class methodsClassTest {
 
     @Test
     @DisplayName("Equals and NotEquals")
-    void checkEquals() {
+    void shouldEquals() {
         assertThat(1).isEqualTo(1);
         assertThat(2).isNotEqualTo(1);
     }
 
     @Test
     @DisplayName("The reference of 2 objects is the same")
-    void checkReference() {
+    void shouldMatch() {
         Book book1 = new Book();
         Book book2 = book1;
 
@@ -31,39 +31,51 @@ class methodsClassTest {
     }
 
     @Test
-    @DisplayName("Two arrays are the same")
-    void checkArrays() {
-        List<Integer> list1 = List.of(1,2,3,4);
-        List<Integer> list2 = List.of(1,2,3,4);
+    @DisplayName("The reference of 2 Objects is not the same")
+    void shouldNotMatch() {
+        Book book1 = new Book();
+        Book book2 = new Book();
 
-        assertThat(list1).isEqualTo(list2);
+        assertThat(book1).isNotSameAs(book2);
+    }
+
+    @Test
+    @DisplayName("Two arrays are the same")
+    void shouldMatchArrays() {
+        Integer[] arrayA = {1,2,3,4};
+        Integer[] arrayB = {1,2,3,4};
+
+        assertThat(arrayA).isEqualTo(arrayB);
+        assertThat(arrayA).containsExactly(arrayB);
     }
 
     @Test
     @DisplayName("Check the order of the elements of an ArrayList")
-    void checkArrayElements() {
-        List<Instrument> instrumentList = new ArrayList<>();
+    void shouldMatchArrayElements() {
+        List<Object> mixedList = new ArrayList<>();
         Guitar guitar = new Guitar("Stratocaster");
         Piano piano = new Piano("Yamaha");
         Ukulele ukulele = new Ukulele("XTZ");
+        String string = "ABC";
         Bajo bajo = new Bajo("Bajo increible");
 
-        instrumentList.add(guitar);
-        instrumentList.add(piano);
-        instrumentList.add(ukulele);
+        mixedList.add(guitar);
+        mixedList.add(piano);
+        mixedList.add(ukulele);
+        mixedList.add(string);
 
-        assertThat(instrumentList).containsExactly(guitar,piano,ukulele);
+        assertThat(mixedList).containsExactly(guitar,piano,ukulele,string);
 
-        assertThat(instrumentList).containsExactlyInAnyOrder(piano,ukulele,guitar);
+        assertThat(mixedList).containsExactlyInAnyOrder(piano,ukulele,guitar,string);
 
-        assertThat(instrumentList).containsOnlyOnce(guitar);
+        assertThat(mixedList).containsOnlyOnce(guitar);
 
-        assertThat(instrumentList).doesNotContain(bajo);
+        assertThat(mixedList).doesNotContain(bajo);
     }
 
     @Test
     @DisplayName("Check that Map has one of the elements")
-    void checkMap() {
+    void shouldExist() {
         Map<Integer, String> houses = new HashMap<>();
 
         houses.put(1,"Casa 1");
@@ -73,17 +85,16 @@ class methodsClassTest {
     }
 
     @Test
-    @DisplayName("Check IndexOutOfBound exception")
-    void checkException() {
-        assertThatThrownBy(()-> excepcionClass.exception()).isInstanceOf(IndexOutOfBoundsException.class);
+    @DisplayName("Check ArrayIndexOutOfBound exception")
+    void shouldThrowException() {
+        assertThatThrownBy(() -> excepcionClass.exception(6)).isInstanceOf(ArrayIndexOutOfBoundsException.class);
     }
 
     @Test
     @DisplayName("Check empty object")
-    void checkEmpty() {
-        List<Objects> list = new ArrayList<>();
+    void shouldBeEmpty() {
+        Optional<String> opEmpty = Optional.empty();
 
-        assertThat(list).isEmpty();
+        assertThat(opEmpty).isEmpty();
     }
-
 }

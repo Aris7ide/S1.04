@@ -1,11 +1,8 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class excepcionClass {
 
-    static List<Integer> newList = new ArrayList<>();
+    private static final int[] array = new int[3];
 
-    public static void exception() {
-        newList.get(3);
+    public static int exception(int i) {
+        return array[i];
     }
 }

@@ -26,10 +26,28 @@ class CalculoDniTest {
             "76543210, S",
             "11234567, X",
             "44444444, A"})
-    void testCalculateLetter(int numberDni,char expectedLetter) {
+    void shouldWork(int numberDni,char expectedLetter) {
         char resultLetter = calculoDni.calculateDniLetter(numberDni);
 
         assertEquals(expectedLetter,resultLetter);
+    }
+
+    @ParameterizedTest
+    @DisplayName("Convalidar que estos resultados no funcionen")
+    @CsvSource ({"12345678,A",
+            "00000000,R",
+            "12345678, Y",
+            "00000000, Y",
+            "87654321, H",
+            "53821947, G",
+            "20394812, A",
+            "76543210, T",
+            "11234567, U",
+            "44444444, W"})
+    void shouldNotWork(int numberDni, char expectedLetter) {
+        char resultLetter = calculoDni.calculateDniLetter(numberDni);
+
+        assertNotEquals(expectedLetter,resultLetter);
     }
 
 

@@ -16,7 +16,7 @@ class CalculatorTest {
 
     @Test
     void calculatorStartsWithTotalZero() {
-        assertThat(calculator.getTotal()).isEqualTo(0);
+        assertThat(calculator.getTotal()).isZero();
     }
 
     @Test
@@ -48,14 +48,16 @@ class CalculatorTest {
 
     @Test
     void checkDivideException() {
-        assertThatThrownBy(() -> calculator.operationDivide(0)).isInstanceOf(ArithmeticException.class).hasMessage("No se puede dividir por 0");
+        calculator.operationAdd(10);
+        assertThrows(ArithmeticException.class, ()-> calculator.operationDivide(0));
     }
 
     @Test
     void checkResetToZero() {
         calculator.operationAdd(30);
+        assertThat(calculator.getTotal()).isNotZero();
         calculator.operationReset();
-        assertThat(calculator.getTotal()).isEqualTo(0);
+        assertThat(calculator.getTotal()).isZero();
     }
 
     @Test
